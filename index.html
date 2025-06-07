@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Stitch Design</title>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link 
+    href="https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900" 
+    rel="stylesheet" 
+    media="all" 
+  />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 90%;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+
+<body>
+  <div class="relative flex flex-col min-h-screen bg-slate-50 justify-between overflow-x-hidden">
+    <!-- Header -->
+    <header class="sticky top-0 z-10 bg-slate-50/80 backdrop-blur-sm">
+      <div class="flex items-center justify-between p-4 pb-3 border-b border-slate-200">
+        <button aria-label="Cerrar" class="text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md">
+          <div class="flex size-10 items-center justify-center">
+            <svg fill="currentColor" height="24px" width="24px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+              <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+            </svg>
+          </div>
+        </button>
+        <h1 class="text-xl font-semibold text-center flex-1 pr-10 text-slate-900">Suscripción a la Web de Kriss</h1>
+      </div>
+    </header>
+
+    <!-- Formulario -->
+    <main class="flex-grow px-6 py-8">
+      <form 
+        method="POST" 
+        action="https://script.google.com/macros/s/AKfycbxEF1gcDj8jmYiyM5X-nm2G0awChi9K1vRwiRpGrezHx8wh2fO6e0oZ3nItQPKOnPHptw/exec" 
+        class="space-y-6"
+      >
+
+        <div>
+          <label for="name" class="block text-sm font-medium text-slate-700 mb-1.5">Nombre</label>
+          <input type="text" name="nombre"  id="name" placeholder="Tu nombre" required
+            class="form-input w-full rounded-xl bg-slate-100 h-12 px-4 text-slate-900 placeholder:text-slate-400" />
+        </div>
+
+        <div>
+          <label for="last-name" class="block text-sm font-medium text-slate-700 mb-1.5">Apellido</label>
+          <input type="text" name="apellido" id="last-name" placeholder="Tu apellido" required
+            class="form-input w-full rounded-xl bg-slate-100 h-12 px-4 text-slate-900 placeholder:text-slate-400" />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-slate-700 mb-1.5">Correo electrónico</label>
+          <input type="email" name="correo" id="email" placeholder="correo@ejemplo.com" required
+            class="form-input w-full rounded-xl bg-slate-100 h-12 px-4 text-slate-900 placeholder:text-slate-400" />
+        </div>
+
+        <div>
+          <label for="whatsapp" class="block text-sm font-medium text-slate-700 mb-1.5">Número de WhatsApp</label>
+          <input type="tel" name="whatsapp" id="whatsapp" placeholder="Ej: +51 999999999" required
+            class="form-input w-full rounded-xl bg-slate-100 h-12 px-4 text-slate-900 placeholder:text-slate-400" />
+        </div>
+
+        <div>
+          <label for="country" class="block text-sm font-medium text-slate-700 mb-1.5">País</label>
+          <select name="pais" id="country" required 
+            class="form-select w-full rounded-xl bg-slate-100 h-12 px-4 text-slate-900">
+            <option disabled selected value="">Selecciona tu país</option>
+            <option value="ECU">Ecuador</option>
+            <option value="PER">Perú</option>
+            <option value="EEU">EEUU</option>
+            <option value="COL">Colombia</option>
+            <option value="VES">Venezuela</option>
+            <option value="CHI">Chile</option>
+            <option value="BRA">Brasil</option>
+            <option value="CAN">Canadá</option>
+            <option value="PUE">Puerto Rico</option>
+            <option value="ESP">España</option>
+            <option value="BOL">Bolivia</option>
+            <option value="ARG">Argentina</option>
+            <option value="AUS">Australia</option>
+          </select>
+        </div>
+
+        <div class="flex items-start pt-2">
+          <input type="checkbox" name="subscribe" id="subscribe" required
+            class="form-checkbox h-5 w-5 text-blue-600 border-slate-300 rounded" />
+          <label for="subscribe" class="ml-2 text-sm text-slate-700">
+            Quiero recibir actualizaciones y boletines de Kriss.
+          </label>
+        </div>
+
+        <div class="pt-4">
+          <button type="submit" 
+            class="w-full h-12 px-5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition">
+            Suscribirse
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="px-6 py-4 border-t border-slate-200">
+      <p class="text-slate-600 text-sm text-center">
+        ¿Ya tienes cuenta? 
+        <a href="#" class="text-blue-600 hover:text-blue-800 underline">Inicia sesión</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
